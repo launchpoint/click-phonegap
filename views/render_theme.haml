@@ -1,0 +1,12 @@
+!!!Transitional
+%html
+  %head
+    =$head['output']
+    - foreach( gather($css_assets['data'], 'assets') as $link)
+      %link{:rel=>'stylesheet', :href=>$link['src']}
+    - foreach(gather($js_assets['data'], 'assets') as $link)
+      %script{:type=>'text/javascript', :src=>$link['src']}          
+    =$css_assets['output']
+    =$js_assets['output']
+  %body
+    =$content['output']

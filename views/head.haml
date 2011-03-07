@@ -1,0 +1,9 @@
+:js
+  function proxy(url)
+  {
+    <? if($phonegap_settings['debug']): ?>
+      return '<?=proxy_url()?>?url='+$.URLEncode(url);
+    <? else: ?>
+      return url;
+    <? endif; ?>
+  }
